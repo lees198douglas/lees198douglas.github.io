@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin: auto;
+}
+
+/* Style the header */
+.header {
+  background-color: #cfcbcb;
+  padding: 10px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .menus {
+  display: flex;
+}
+
+.header .menus .menu-button{
+  padding: 10px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+}
+
+.header .menus .menu-button:not(.selected):hover{
+  background-color: #e7e7e7;
+}
+
+.header .menus .menu-button.selected{
+  background-color: rgb(79, 111, 255);
+  border: 0;
+  color: white;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.content .pic {
+  position: relative;
+  margin: 10px;
+  width: 280px;
+  height: 280px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.content .pic > img, .flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+  text-align: center;
+
+}
+
+.content .pic:hover {
+  transform: rotateY(180deg);
+}
+
+/* Style the footer */
+.footer {
+  clear: left;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  background-color: rgb(147, 184, 190);
+  color: white;
+  text-align: center;
+}
+
